@@ -51,89 +51,29 @@ if (import.meta.main) {
 writeFileSync(join(dayPath, "index.ts"), indexTemplate);
 console.log(`✓ Created ${dayFolder}/index.ts`);
 
-// Create index.test.ts
-const testTemplate = `import { test, expect, describe } from "bun:test";
-import { readFileSync } from "node:fs";
-import { solvePart1, solvePart2 } from "./index.ts";
-
-const sample = readFileSync("${dayFolder}/sample.txt", "utf-8");
-
-describe("Part 1", () => {
-  test("sample input", () => {
-    expect(solvePart1(sample)).toBe(0); // TODO: Update expected value
-  });
-});
-
-describe("Part 2", () => {
-  test("sample input", () => {
-    expect(solvePart2(sample)).toBe(0); // TODO: Update expected value
-  });
-});
-`;
-writeFileSync(join(dayPath, "index.test.ts"), testTemplate);
-console.log(`✓ Created ${dayFolder}/index.test.ts`);
-
-// Create empty input files
+// Create empty input file
 writeFileSync(join(dayPath, "input.txt"), "");
 console.log(`✓ Created ${dayFolder}/input.txt`);
-
-writeFileSync(join(dayPath, "sample.txt"), "");
-console.log(`✓ Created ${dayFolder}/sample.txt`);
 
 // Create README.md
 const readmeTemplate = `# Day ${day}: [Title]
 
 [Problem](https://adventofcode.com/2025/day/${day})
 
-## Problem Summary
-
-TODO: Add problem description
-
-**Key Points:**
-- TODO: Add key points
-
-### Part 1
+## Part 1
 TODO: Describe Part 1
 
-### Part 2
+## Part 2
 TODO: Describe Part 2
 
-## Algorithm Explanation
-
-### Part 1
-
-TODO: Explain algorithm
-
-**Time Complexity:** O(?)
-**Space Complexity:** O(?)
-
-### Part 2
-
-TODO: Explain algorithm
-
-**Time Complexity:** O(?)
-**Space Complexity:** O(?)
-
 ## Run
-
 \`\`\`bash
 bun run ${dayFolder}
 \`\`\`
 
-## Test
-
-\`\`\`bash
-bun test ${dayFolder}/index.test.ts
-\`\`\`
-
 ## Answers
-
 - Part 1: ? ⭐
 - Part 2: ? ⭐
-
-## Key Insights
-
-1. TODO: Add insights
 `;
 writeFileSync(join(dayPath, "README.md"), readmeTemplate);
 console.log(`✓ Created ${dayFolder}/README.md`);
@@ -150,8 +90,6 @@ console.log(`✓ Updated package.json with '${dayFolder}' script`);
 console.log(`\n🎄 Day ${day} setup complete!`);
 console.log(`\nNext steps:`);
 console.log(`1. Paste puzzle input into ${dayFolder}/input.txt`);
-console.log(`2. Paste sample input into ${dayFolder}/sample.txt`);
-console.log(`3. Update ${dayFolder}/README.md with problem details`);
-console.log(`4. Implement solution in ${dayFolder}/index.ts`);
-console.log(`5. Run: bun run ${dayFolder}`);
-console.log(`6. Test: bun test ${dayFolder}/index.test.ts`);
+console.log(`2. Update ${dayFolder}/README.md with problem details`);
+console.log(`3. Implement solution in ${dayFolder}/index.ts`);
+console.log(`4. Run: bun run ${dayFolder}`);
