@@ -3,7 +3,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "day01": "bun day01/index.ts"
+    "day01": "bun day01/index.ts",
+    "new-day": "bun scripts/new-day.ts"
   },
   "devDependencies": {
     "@types/bun": "^1.3.3",
