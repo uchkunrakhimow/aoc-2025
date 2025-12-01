@@ -1,0 +1,12 @@
+{
+  "name": "aoc-2025",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "day01": "bun day01/index.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.3.3",
+    "@types/node": "^24.10.1"
+  }
+}
