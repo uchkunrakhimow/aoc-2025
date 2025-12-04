@@ -5,7 +5,8 @@
   "scripts": {
     "day01": "bun day01/index.ts",
     "new-day": "bun scripts/new-day.ts",
-    "day02": "bun day02/index.ts"
+    "day02": "bun day02/index.ts",
+    "day03": "bun day03/index.ts"
   },
   "devDependencies": {
     "@types/bun": "^1.3.3",
