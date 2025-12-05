@@ -3,8 +3,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "day01": "bun day01/index.ts",
     "new-day": "bun scripts/new-day.ts",
+    "day01": "bun day01/index.ts",
     "day02": "bun day02/index.ts",
     "day03": "bun day03/index.ts",
     "day04": "bun day04/index.ts",
