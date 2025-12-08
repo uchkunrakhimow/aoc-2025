@@ -8,7 +8,8 @@
     "day02": "bun day02/index.ts",
     "day03": "bun day03/index.ts",
     "day04": "bun day04/index.ts",
-    "day05": "bun day05/index.ts"
+    "day05": "bun day05/index.ts",
+    "day06": "bun day06/index.ts"
   },
   "devDependencies": {
     "@types/bun": "^1.3.3",
