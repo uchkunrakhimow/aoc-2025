@@ -1,4 +1,4 @@
-import { read } from "../utils/read.ts";
+import { readFileSync } from "node:fs";
 
 export const solvePart1 = (input: string) => {
   const grid = input.trim().split("\n");
@@ -86,7 +86,7 @@ export const solvePart2 = (input: string) => {
 };
 
 if (import.meta.main) {
-  const input = read(4);
+  const input = readFileSync("day04/input.txt", "utf-8");
   console.log("Part 1:", solvePart1(input));
   console.log("Part 2:", solvePart2(input));
 }

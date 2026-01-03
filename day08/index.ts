@@ -1,4 +1,4 @@
-import { read } from "../utils/read.ts";
+import { readFileSync } from "node:fs";
 
 type Point3D = { x: number; y: number; z: number };
 
@@ -134,7 +134,7 @@ export const solvePart2 = (input: string): number => {
 };
 
 if (import.meta.main) {
-  const input = read(8);
+  const input = readFileSync("day08/input.txt", "utf-8");
   console.log("Part 1:", solvePart1(input));
   console.log("Part 2:", solvePart2(input));
 }

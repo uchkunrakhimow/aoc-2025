@@ -30,7 +30,7 @@ mkdirSync(dayPath, { recursive: true });
 console.log(`✓ Created ${dayFolder}/`);
 
 // Create index.ts
-const indexTemplate = `import { read } from "../utils/read.ts";
+const indexTemplate = `import { readFileSync } from "node:fs";
 
 export const solvePart1 = (input: string): number => {
   // TODO: Implement Part 1
@@ -43,7 +43,7 @@ export const solvePart2 = (input: string): number => {
 };
 
 if (import.meta.main) {
-  const input = read(${day});
+  const input = readFileSync("${dayFolder}/input.txt", "utf-8");
   console.log("Part 1:", solvePart1(input));
   console.log("Part 2:", solvePart2(input));
 }

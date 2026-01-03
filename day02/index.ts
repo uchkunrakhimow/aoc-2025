@@ -1,4 +1,4 @@
-import { read } from "../utils/read.ts";
+import { readFileSync } from "node:fs";
 
 const isRepeatedTwice = (id: number): boolean => {
   const str = id.toString();
@@ -74,7 +74,7 @@ export const solvePart2 = (input: string): number => {
 };
 
 if (import.meta.main) {
-  const input = read(2);
+  const input = readFileSync("day02/input.txt", "utf-8");
   console.log("Part 1:", solvePart1(input));
   console.log("Part 2:", solvePart2(input));
 }

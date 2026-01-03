@@ -1,4 +1,4 @@
-import { read } from "../utils/read.ts";
+import { readFileSync } from "node:fs";
 
 export const solvePart1 = (input: string): number => {
   const sections = input.trim().split("\n\n");
@@ -56,7 +56,7 @@ export const solvePart2 = (input: string): number => {
 };
 
 if (import.meta.main) {
-  const input = read(5);
+  const input = readFileSync("day05/input.txt", "utf-8");
   console.log("Part 1:", solvePart1(input));
   console.log("Part 2:", solvePart2(input));
 }
